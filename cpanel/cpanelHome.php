@@ -151,7 +151,7 @@
 			<br>
 			<table id="table">
 				<tr id="title">
-					<th class="email">Email</th>
+					<th class="email">Address</th>
 					<th class="contact">Contact</th>
 					<th class="date">Date</th>
 					<th class="time">Time</th>
@@ -165,7 +165,7 @@
 		}else{
 			while($list = mysqli_fetch_array($result)){
 				echo "<tr id='items'>";
-				echo "	<td class='email'>".$list['email']."</td>";
+				echo "	<td class='email'>".$list['address']."</td>";
 				echo "	<td class='contact'>". $list['contact'] ."</td>";
 				echo "	<td class='date'>". substr($list['date'], 0,10) ."</td>";
 				echo "	<td class='time'>". substr($list['date'], 10) ."</td>";
@@ -180,7 +180,7 @@
 			<br>
 			<table id="table">
 				<tr id="title">
-					<th class="email">Email</th>
+					<th class="email">Address</th>
 					<th class="contact">Contact</th>
 					<th class="date">Date</th>
 					<th class="time">Time</th>
@@ -194,7 +194,7 @@
 		}else{
 			while($list = mysqli_fetch_array($result)){
 				echo "<tr id='items'>";
-				echo "	<td class='email'>".$list['email']."</td>";
+				echo "	<td class='email'>".$list['address']."</td>";
 				echo "	<td class='contact'>". $list['contact'] ."</td>";
 				echo "	<td class='date'>". substr($list['date'], 0,10) ."</td>";
 				echo "	<td class='time'>". substr($list['date'], 10) ."</td>";
