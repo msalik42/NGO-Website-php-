@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background: #D2E8C7;
+			margin: 0;
+			padding: 0;
+		}
+		#header ul li{
+			padding: 5px;
+			list-style: none;
+			float: left;
+			margin-left: 20px;
+			color: #fff;
+			width: 100px;	
+			height: 30px;
+			border-bottom: 4px solid #222;
+		}
+		
+		
+		#header ul li:hover{
+			border-bottom: 4px solid #fff;
+		}
+		#img_body img{
+			width: 100%;
+			transition: 0.5s;
+		}
+		#footer{
+			width: 100%;
+			display: block;
+		}
+		#footer center{
+			padding: 30px;
+			
+		}#footer center a{
+			color: #222;
+		}
+	</style>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<title>NGO</title>
+</head>
+<body>
+	<div id="header">
+		<table>
+			<tr>
+				<td>
+					<ul style="float: left;">
+						<a href=""><li>NGO_INDIA</li></a>
+					</ul>
+				</td>
+				<td>
+					<ul style="float: right;">
+						<a href=""><li>HOME</li></a>		
+						<a href=""><li>ABOUT</li></a>
+						<a href=""><li>CONTACT</li></a>
+						<a href=""><li>LOGIN</li></a>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<tr>
+			
+			
+		</tr>
+			
+	</div>
+	<div id="body">
+		<div id="img_body">
+			<center>
+			<div style="width: 100%; height: auto">
+  				<img class="mySlides" src="img/1.jpg" style="width:100%">
+  				<img class="mySlides" src="img/2.jpg" style="width:100%">
+  				<img class="mySlides" src="img/1.jpg" style="width:100%">
+			</div>
+			</center>
+		</div>
+	</div>
+	<br>
+	<div id="footer">
+		<center>
+			Follow Us: 
+			<a href="https://www.facebook.com" target="_blank">
+				<i class="fab fa-facebook-square" style="font-size:30px;"></i>
+			</a>
+			
+			<a href="https://www.facebook.com" target="_blank">
+				<i class="fab fa-youtube" style="font-size:30px;"></i>
+			</a>
+			
+			<a href="https://www.facebook.com" target="_blank">
+				<i class="fab fa-twitter-square" style="font-size:30px;"></i>
+			</a>
+
+			<a href="https://www.facebook.com" target="_blank">
+				<i class="fab fa-instagram" style="font-size:30px;"></i>
+			</a>
+		</center>
+	</div>
+
+	<script>
+		var myIndex = 0;
+		carousel();
+		function carousel() {
+    		var i;
+    		var x = document.getElementsByClassName("mySlides");
+    		for (i = 0; i < x.length; i++) {
+       			x[i].style.display = "none";  
+    		}
+    		myIndex++;
+    		if (myIndex > x.length) {myIndex = 1}    
+    		x[myIndex-1].style.display = "block";  
+    		setTimeout(carousel, 2000); // Change image every 2 seconds
+		}
+	</script>
+
+
+</body>
+</html>

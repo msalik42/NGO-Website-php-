@@ -1,0 +1,44 @@
+body{
+			background: #fff;
+			margin: 0;
+			padding: 0;
+		}
+		#header table tr > td{
+			background: #222;
+			width: 100px;
+			box-shadow: 4px 4px 20px #222;
+
+		}
+		#header ul li{
+			padding: 5px;
+			list-style: none;
+			float: left;
+			margin-left: 20px;
+			color: #fff;
+			width: 100px;	
+			height: 30px;
+			border-bottom: 4px solid #222;
+		}
+		
+		
+		#header ul li:hover{
+			border-bottom: 4px solid #E8AB19;
+			color: #E8AB19;
+		}
+		#img_body img{
+			width: 100%;
+			transition: 0.5s;
+		}
+		#footer{
+			position: relative;
+			bottom: 0;
+			width: 100%;
+			display: block;
+			background: #E8AB19;
+		}
+		#footer center{
+			padding: 30px;
+			
+		}#footer center a{
+			color: #222;
+		}

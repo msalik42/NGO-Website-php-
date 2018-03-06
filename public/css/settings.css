@@ -1,0 +1,46 @@
+#settings{
+	margin: 10px auto;
+	border: 1px solid #222;
+	width: 95%;
+	height: 350px;
+}
+
+#settings p{
+	float: left;
+	margin-left: 50px;
+	font-size: 40px;
+	color: #E8AB19;
+	width: 100%;
+	clear: both;
+	float: left;
+}
+#settings form{
+	width: 100%;
+	clear: both;
+	float: left;
+}
+#settings table {
+	width: 100%;
+}
+input{
+	width: 50%;
+	height:30px;
+	border-radius: 4px;
+	outline: none;
+	border: 1px solid #818181;
+	margin-bottom: 10px;
+	min-width: 300px;
+	padding-left: 10px;
+}
+input[type="submit"]{
+	width: 50px;
+	height: 35px;
+	background: #222;
+	color: #fff;
+	margin-top: 10px;
+}
+input[type="submit"]:hover{
+	background: #E8AB19;
+	color: #222;
+	font-weight: bold;
+}
