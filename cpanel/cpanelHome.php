@@ -39,17 +39,85 @@
 		#body{
 			border: 1px solid #222;
 			width: auto;
-			height:300px;
+			height:400px;
 		}
 		#body #food{
 			width: 100%;
-			height: 200px;
-			background: blue;
+			height: 400px;
+			background: #fff;
 		}
 		#body #cloth{
 			width: 100%;
-			height: 100px;
+			height: 400px;
 			background: lightblue;
+		}
+		#table{
+			width: 80%;
+			border: none;
+		}
+		tr{
+			border: none;
+		}
+		td{
+			border: none;
+			margin: 0;
+		}
+		th{
+			border: none;
+			margin: 0;
+		}
+		#title .email{
+			width: 25%;
+			background: #222;
+			color: #fff;
+		}
+		#title .contact{
+			background: #222;
+			width: 10%;
+			color: #fff;
+		}
+		#title .date{
+			background: #222;
+			width: 9%;
+			color: #fff;
+		}
+		#title .time{
+			background: #222;
+			width: 6%;
+			color: #fff;
+		}
+		#title .description{
+			background: #222;
+			width: 50%;
+			color: #fff;
+
+		}
+		#title{
+			border: 1px solid #dddddd;
+		}
+		#title th{
+			text-align: left;
+			font-weight: bold;
+			font-size: 20px;
+			padding: 5px;
+		}
+		#items td{
+			padding-left: 5px;
+		}
+		table {
+		    font-family: arial, sans-serif;
+		    border-collapse: collapse;
+		    width: 100%;
+		}
+
+		td, th {
+		    border: 1px solid #dddddd;
+		    text-align: left;
+		    padding: 8px;
+		}
+
+		tr:nth-child(even) {
+		    background-color: #dddddd;
 		}
 	</style>
 </head>
@@ -66,25 +134,76 @@
 	<div id="body">
 		<div id="food">
 			<?php
+				/*
 				$query = "SELECT * FROM donate WHERE `type` = 'food'";
 				$result = mysqli_query($connection,$query);
 				if(!$result){
 					echo "query failed".mysqli_error($connection);
 				}else{
-					$row = mysqli_fetch_array($result);
-					while($list = $row){
+					while($list = mysqli_fetch_array($result)){
 						echo $list['email'];
 						echo $list['description'];
 						echo "<br>";
 					}
 				}
-
+				*/
 			?>
+			<br>
+			<table id="table">
+				<tr id="title">
+					<th class="email">Email</th>
+					<th class="contact">Contact</th>
+					<th class="date">Date</th>
+					<th class="time">Time</th>
+					<th class="description">Description</th>
+				</tr>
+	<?php
+		$query = "SELECT * FROM donate WHERE `type` = 'food' order by `date` desc";
+		$result = mysqli_query($connection,$query);
+		if(!$result){
+			echo "query failed".mysqli_error($connection);
+		}else{
+			while($list = mysqli_fetch_array($result)){
+				echo "<tr id='items'>";
+				echo "	<td class='email'>".$list['email']."</td>";
+				echo "	<td class='contact'>". $list['contact'] ."</td>";
+				echo "	<td class='date'>". substr($list['date'], 0,10) ."</td>";
+				echo "	<td class='time'>". substr($list['date'], 10) ."</td>";
+				echo "	<td class='description'>". $list['description'] ."</td>";
+				echo "</tr>";
+			}
+		}		
+	?>
+			</table>
 		</div>
 		<div id="cloth">
-			<?php
-				echo "cloth";
-			?>
+			<br>
+			<table id="table">
+				<tr id="title">
+					<th class="email">Email</th>
+					<th class="contact">Contact</th>
+					<th class="date">Date</th>
+					<th class="time">Time</th>
+					<th class="description">Description</th>
+				</tr>
+	<?php
+		$query = "SELECT * FROM donate WHERE `type` = 'cloth' order by `date` desc";
+		$result = mysqli_query($connection,$query);
+		if(!$result){
+			echo "query failed".mysqli_error($connection);
+		}else{
+			while($list = mysqli_fetch_array($result)){
+				echo "<tr id='items'>";
+				echo "	<td class='email'>".$list['email']."</td>";
+				echo "	<td class='contact'>". $list['contact'] ."</td>";
+				echo "	<td class='date'>". substr($list['date'], 0,10) ."</td>";
+				echo "	<td class='time'>". substr($list['date'], 10) ."</td>";
+				echo "	<td class='description'>". $list['description'] ."</td>";
+				echo "</tr>";
+			}
+		}		
+	?>
+			</table>
 		</div>
 	</div>
 	<div id="footer">
